@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple, responsive online quiz app for students.">
+  <title>QuickQuiz | Online Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="QuickQuiz home"><span class="brand-mark">Q</span> QuickQuiz</a>
+      <span class="tag">STUDENT EDITION</span>
+    </header>
+
+    <section class="hero" id="intro">
+      <div class="eyebrow"><span class="sparkle">✦</span> LEARN SOMETHING NEW</div>
+      <h1>Ready to test<br><span>your knowledge?</span></h1>
+      <p class="subtitle">Take a quick quiz, challenge yourself, and see how much you know.</p>
+      <div class="info-row">
+        <div class="info-card"><span class="info-icon">◷</span><div><strong>5 questions</strong><small>Quick challenge</small></div></div>
+        <div class="info-card"><span class="info-icon">✓</span><div><strong>Instant results</strong><small>See your score</small></div></div>
+      </div>
+      <button class="primary-btn start-btn" id="start-btn">Start quiz <span aria-hidden="true">→</span></button>
+      <p class="note">No pressure — just have fun learning.</p>
+    </section>
+
+    <section class="quiz-panel hidden" id="quiz-panel" aria-live="polite">
+      <div class="quiz-heading">
+        <div><div class="eyebrow">GENERAL KNOWLEDGE</div><h2>Quick challenge</h2></div>
+        <div class="question-count" id="question-count">QUESTION 1 / 5</div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-meta"><span id="question-number">Question 1</span><span class="timer" id="timer">⏱ 30s</span></div>
+      <h3 id="question-text">Question goes here</h3>
+      <div class="options" id="options"></div>
+      <div class="quiz-footer"><span id="answered-status">Choose one answer</span><button class="primary-btn next-btn" id="next-btn" disabled>Next question →</button></div>
+    </section>
+
+    <section class="result-panel hidden" id="result-panel" aria-live="polite">
+      <div class="result-icon" id="result-icon">🏆</div>
+      <div class="eyebrow">QUIZ COMPLETED</div>
+      <h2 id="result-title">Well done!</h2>
+      <p class="subtitle" id="result-message">Here is how you did.</p>
+      <div class="score-card"><span>Your score</span><strong id="score">0 / 5</strong><div class="score-track"><div class="score-fill" id="score-fill"></div></div><small id="score-percent">0% correct</small></div>
+      <div class="review" id="review"></div>
+      <button class="primary-btn restart-btn" id="restart-btn">Try again ↻</button>
+    </section>
+    <footer>Made for curious minds <span>✦</span></footer>
+  </main>
+</body>
+</html>
